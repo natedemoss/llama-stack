@@ -15,8 +15,23 @@
 To try Llama Stack locally, run:
 
 ```bash
-curl -LsSf https://github.com/llamastack/llama-stack/raw/main/scripts/install.sh | bash
+curl -LsSf https://raw.githubusercontent.com/meta-llama/llama-stack/main/scripts/install.sh | bash
 ```
+
+#### Windows (PowerShell) One-Line Installer
+
+```powershell
+Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/meta-llama/llama-stack/main/scripts/install.ps1 -OutFile install.ps1
+PowerShell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+You can customize parameters, e.g.:
+
+```powershell
+./install.ps1 -Port 9000 -ModelAlias "llama3.2:11b" -NoTelemetry
+```
+
+This mirrors the Linux/macOS script and provisions (optionally) the telemetry stack (Jaeger, OTEL Collector, Prometheus, Grafana), Ollama, and the Llama Stack container.
 
 ### Overview
 
