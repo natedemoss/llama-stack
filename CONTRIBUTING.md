@@ -17,6 +17,15 @@ uv pip install -e .
 source .venv/bin/activate
 ```
 
+```powershell
+# Windows (PowerShell) equivalent
+cd llama-stack
+uv venv --python 3.12
+uv sync --group dev
+uv pip install -e .
+./.venv/Scripts/Activate.ps1
+```
+
 ```{note}
 If you are making changes to Llama Stack, it is essential that you use Python 3.12 as shown above.
 Llama Stack can work with Python 3.13 but the pre-commit hooks used to validate code changes only work with Python 3.12.
